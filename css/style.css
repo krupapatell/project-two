@@ -1,0 +1,375 @@
+/* Global Styles */
+
+html,
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: rgb(187, 29, 29);
+  font-weight: 5000;
+  font-size: 100px;
+  line-height: 100px;
+  text-align: left;
+  vertical-align: center;
+  padding: 100px 0px 0px 100px;
+  margin: 0px;
+}
+h2 {
+  font-size: 29px;
+  text-align: center;
+}
+h3 {
+  font-size: 30px;
+  text-align: center;
+}
+p {
+  font-size: 22px;
+  line-height: 19x;
+  padding: 100px;
+}
+img {
+  width: 100%;
+  display: block;
+}
+figure {
+  margin: 0;
+}
+
+/* Section Styles */
+
+main > article > section {
+  padding: 65px 20px;
+}
+
+@media (min-width: 768px) {
+  main > article > section > header > p {
+    max-width: 50%;
+  }
+  main > article > section > h2 {
+    padding: 65px 40px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+/* Grid Styles */
+
+/* only applied on desktop*/
+@media (min-width: 768px) {
+  /* this is a grid w two columns*/
+  .grid-1-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
+
+/* only applied on desktop*/
+@media (min-width: 768px) {
+  /* this is a grid w two columns*/
+  .grid-1-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Card Styles */
+.card {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.card section {
+  padding: 20px;
+}
+
+.card p {
+  font-size: 17px;
+}
+
+/* only applied on desktop*/
+@media (min-width: 768px) {
+  /* image should fill figure container of card that also has 2 columns*/
+  .card.grid-1-2 img {
+    object-fit: cover;
+    height: 100%;
+  }
+  .card.grid-1-2 section {
+    padding: 40px;
+  }
+}
+
+/* Header Styles */
+main > article > header {
+  background: linear-gradient(#ebd2bb, #d2b096);
+  color: white;
+  padding: 0 20px;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+}
+
+main > article > header h1 {
+  margin-top: 0px;
+}
+
+main > article > header a {
+  color: white;
+  text-decoration: none;
+  border: solid 1px white;
+  border-radius: 5px;
+  padding: 20px;
+  display: inline-block;
+}
+main > article > header img {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  main > article > header {
+    height: unset;
+    padding: 0px;
+  }
+
+  /* the main header should have a grid gap of 40px*/
+  main > article > header.grid-1-2 {
+    grid-gap: 100px;
+  }
+
+  main > article > header > figure {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Button Styles */
+
+/* Navbar Styles */
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+  float: right;
+  overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.subnav2btn {
+  float: right;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  background-color: white;
+  text-decoration-line: underline;
+  text-decoration-color: red;
+}
+
+.subnav2btn:hover {
+  background-color: white;
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  position: relative;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav2-content {
+  display: none;
+  position: relative;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  align-items: baseline;
+  z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: right;
+  color: black;
+  text-decoration: none;
+}
+
+.subnav2-content a {
+  float: right;
+  color: black;
+  text-decoration: none;
+}
+
+/* Add a white background color on hover */
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav2-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.subnav-content:hover .subnav2-content {
+  display: block;
+}
+
+/*end*/
+
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#logo {
+  height: 30px;
+  width: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 100;
+  margin: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#hamburger {
+  display: none;
+}
+
+#overlay {
+  display: none;
+}
+/* navigation mobile style*/
+
+@media (max-width: 767px) {
+  nav {
+    padding: 0 20px;
+  }
+  nav ul {
+    display: none;
+    max-width: 60vw;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+  nav ul.active {
+    display: block;
+  }
+
+  nav ul li {
+    padding: 20px;
+  }
+  #hamburger {
+    display: block;
+    height: 30px;
+    width: auto;
+  }
+
+  #overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  #overlay.active {
+    display: block;
+  }
+}
+
+/* navigation desktop style*/
+@media (min-width: 768px) {
+  nav {
+    padding: 0 40px;
+  }
+  nav ul {
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/*footer styles */
+
+footer {
+  background: black;
+  color: white;
+  padding: 20px 20px;
+}
+
+footer a {
+  color: white;
+}
