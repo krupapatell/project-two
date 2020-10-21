@@ -373,3 +373,53 @@ footer {
 footer a {
   color: white;
 }
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 50px;
+}
+
+.card-front {
+  z-index: 1;
+}
+
+.card-back {
+  z-index: 3;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  padding: 50px;
+  font-size: 100px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px black;
+  width: 200px;
+  height: 200px;
+  transition: all 1s;
+  background: white;
+}
+
+.divider {
+  background: white;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  padding: 50px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card:hover > .card-back {
+  transform: rotateY(360deg);
+  opacity: 0;
+}
+
+.card:hover > .card-front {
+  transform: rotateY(180deg);
+  opacity: 1;
+}
