@@ -27,7 +27,7 @@ h3 {
 p {
   font-size: 22px;
   line-height: 19x;
-  padding: 100px;
+  padding: 20px 80px 20px 80px;
 }
 img {
   width: 100%;
@@ -151,6 +151,10 @@ main > article > header {
   background: linear-gradient(#002933, #002933);
 }
 
+.pinkheader {
+  background: #f39da6;
+}
+
 main > article > header h1 {
   margin-top: 0px;
 }
@@ -207,6 +211,7 @@ main > article > header > figure {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  background-color: white;
 }
 
 /* The subnavigation menu */
@@ -222,9 +227,11 @@ main > article > header > figure {
   outline: none;
   color: black;
   padding: 14px 16px;
-  background-color: inherit;
+  background-color: white;
   font-family: inherit;
   margin: 0;
+  align-items: right;
+  text-align: right;
 }
 
 .subnav2btn {
@@ -234,7 +241,7 @@ main > article > header > figure {
   outline: none;
   color: black;
   padding: 14px 16px;
-  background-color: inherit;
+  background-color: white;
   font-family: inherit;
   margin: 0;
 }
@@ -418,8 +425,9 @@ footer a {
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: rgb(226, 208, 105);
+  color: black;
+  font-size: 30px;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -432,7 +440,7 @@ footer a {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: rgb(255, 255, 255);
 }
 
 /* Style the accordion panel. Note: hidden by default */
