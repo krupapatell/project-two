@@ -75,6 +75,27 @@ main > article > section {
   }
 }
 
+/* Grid Styles */
+
+/* only applied on desktop*/
+@media (min-width: 768px) {
+  /* this is a grid w 4 columns*/
+  .grid-1-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
+
+/* only applied on desktop*/
+@media (min-width: 768px) {
+  /* this is a grid w 4 columns*/
+  .grid-1-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 /* Card Styles */
 .card {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
@@ -89,6 +110,7 @@ main > article > section {
 
 .card p {
   font-size: 17px;
+  padding: 0px;
 }
 
 /* only applied on desktop*/
@@ -103,6 +125,17 @@ main > article > section {
   }
 }
 
+@media (min-width: 768px) {
+  /* image should fill figure container of card that also has 4 columns*/
+  .card.grid-1-4 img {
+    object-fit: cover;
+    height: 10%;
+  }
+  .card.grid-1-4 section {
+    padding: 40px;
+  }
+}
+
 /* Header Styles */
 main > article > header {
   background: linear-gradient(#ebd2bb, #d2b096);
@@ -112,6 +145,10 @@ main > article > header {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
+}
+
+.blueheader {
+  background: linear-gradient(#002933, #002933);
 }
 
 main > article > header h1 {
@@ -130,21 +167,27 @@ main > article > header img {
   opacity: 1;
 }
 
+main > article > header.blueheader img {
+  opacity: 1;
+  height: calc(100vh - 363px);
+  width: auto;
+}
+
 @media (min-width: 768px) {
   main > article > header {
     height: unset;
     padding: 0px;
   }
+}
 
-  /* the main header should have a grid gap of 40px*/
-  main > article > header.grid-1-2 {
-    grid-gap: 100px;
-  }
+/* the main header should have a grid gap of 40px*/
+main > article > header.grid-1-2 {
+  grid-gap: 100px;
+}
 
-  main > article > header > figure {
-    display: flex;
-    align-items: center;
-  }
+main > article > header > figure {
+  display: flex;
+  align-items: center;
 }
 
 /* Button Styles */
@@ -228,7 +271,7 @@ main > article > header img {
   background-color: white;
   width: 100%;
   align-items: baseline;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Style the subnav links */
@@ -357,7 +400,6 @@ nav ul li a {
   nav ul {
     display: flex;
     max-width: 500px;
-    width: 100%;
     justify-content: space-between;
   }
 }
@@ -374,52 +416,29 @@ footer a {
   color: white;
 }
 
-.card {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  padding: 50px;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
 }
 
-.card-front {
-  z-index: 1;
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
 }
 
-.card-back {
-  z-index: 3;
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  padding: 50px;
-  font-size: 100px;
-  border-radius: 20px;
-  box-shadow: 0 0 5px black;
-  width: 200px;
-  height: 200px;
-  transition: all 1s;
-  background: white;
-}
-
-.divider {
-  background: white;
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  padding: 50px;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-}
-
-.card:hover > .card-back {
-  transform: rotateY(360deg);
-  opacity: 0;
-}
-
-.card:hover > .card-front {
-  transform: rotateY(180deg);
-  opacity: 1;
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }
