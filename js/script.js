@@ -15,6 +15,7 @@ function toggleMenu() {
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
 
+
 }
 // execute toggle function from hamburger on click
 hamburger.addEventListener("click", toggleMenu);
@@ -24,6 +25,7 @@ menu.addEventListener("click", toggleMenu);
 
 // exuecute toggle function from overlay on click
 overlay.addEventListener("click", toggleMenu);
+
 
 /* Navbar */
 

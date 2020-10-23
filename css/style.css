@@ -26,7 +26,7 @@ h3 {
 }
 p {
   font-size: 22px;
-  line-height: 19x;
+  line-height: 30px;
   padding: 20px 80px 20px 80px;
 }
 img {
@@ -35,6 +35,79 @@ img {
 }
 figure {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 15;
+  }
+
+  main > article > header > figure > img {
+    max-width: 100%;
+  }
+  main > article > header > section > h1 {
+    padding: 0px 0px;
+    text-align: left;
+    margin: 0;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  main > article > header > section > p {
+    padding: 0px 0px;
+    text-align: left;
+    margin: 0;
+    font-size: 15px;
+    line-height: 30px;
+  }
+  main > article > section > header > h2 {
+    font-size: 20px;
+    padding: 0px;
+  }
+  main > article > section > header > h2 > p {
+    font-size: 20px;
+    padding: 0px;
+  }
+  main > article > section > p {
+    font-size: 15px;
+    padding: 0px;
+  }
+  img.ourwork {
+    height: 200px;
+  }
+
+  div > section > header > h2 {
+    font-size: 20px;
+  }
+
+  div > section > header > p {
+    font-size: 15px;
+    padding: 20px;
+  }
+  h2.faq {
+    font-size: 20px;
+  }
+
+  h2.faq {
+    font-size: 20px;
+  }
+  button.accordion {
+    font-size: 20px;
+  }
+  div.panel > p {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  footer > p {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .navbar a:hover,
+  .subnav:hover .subnavbtn {
+    background-color: white;
+    text-decoration-line: underline;
+    text-decoration-color: red;
+  }
 }
 
 /* Section Styles */
@@ -351,7 +424,7 @@ nav ul li a {
 
 @media (max-width: 767px) {
   nav {
-    padding: 0 20px;
+    padding: 0px 0px 0px 20px;
   }
   nav ul {
     display: none;
@@ -378,6 +451,10 @@ nav ul li a {
     display: block;
     height: 30px;
     width: auto;
+    z-index: 1;
+    float: right;
+    align-content: right;
+    align-items: initial;
   }
 
   #overlay {
