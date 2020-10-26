@@ -108,6 +108,9 @@ figure {
     text-decoration-line: underline;
     text-decoration-color: red;
   }
+  #hamburger {
+    height: 20px;
+  }
 }
 
 /* Section Styles */
