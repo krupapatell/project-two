@@ -284,6 +284,10 @@ main > article > header.blueheader img {
   width: auto;
 }
 
+main > article > header.blueheader.grid-1-2 {
+  grid-gap: 40px;
+}
+
 @media (min-width: 768px) {
   main > article > header {
     height: unset;
