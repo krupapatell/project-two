@@ -5,11 +5,11 @@ var hamburger = document.getElementById("hamburger");
 
 // get the menu element
 var menu = document.getElementById("menu");
-
+// var a = document.getElementById("a");
+//var button = document.querySelectorAll("button.subnavbtn");
 // get the overlay element
 var overlay = document.getElementById("overlay");
 
-var subnavbtn = document.getElementById("subnavbtn");
 
 
 
@@ -17,24 +17,26 @@ var subnavbtn = document.getElementById("subnavbtn");
 // define toggle function
 function toggleMenu() {
     //either adds of removes active class from elelmtns
-    menu.classList.toggle("active");
     overlay.classList.toggle("active");
     hamburger.classList.toggle("active");
-    subnavbtn.classList.toggle("active");
+    menu.classList.toggle("active");
 
    
 }
+
+
+
 
 // execute toggle function from hamburger on click
 hamburger.addEventListener("click", toggleMenu);
 
 // execute toggle function from menu on click
-menu.addEventListener("click", toggleMenu);
+//menu.addEventListener("click", toggleMenu);
 
 // exuecute toggle function from overlay on click
 overlay.addEventListener("click", toggleMenu);
 
-subnavbtn.addEventListener("click", toggleMenu);
+
 
 
 
@@ -61,6 +63,7 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
+
 //mobile menu accordian//
 var acc = document.getElementsByClassName("subnavbtn");
 var i;
@@ -78,5 +81,11 @@ for (i = 0; i < acc.length; i++) {
     } else {
       panel.style.display = "block";
     }
-  });
+  }
+
+  
+  );
+
 }
+
+
