@@ -281,7 +281,7 @@ main > article > header img {
 main > article > header.blueheader img {
   opacity: 1;
   height: calc(100vh - 663px);
-  width: auto;
+  width: calc(100vh - 500px);
 }
 
 main > article > header.blueheader.grid-1-2 {
