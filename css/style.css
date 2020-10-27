@@ -119,6 +119,9 @@ figure {
   main > article > header {
     height: 700px;
   }
+  iframe {
+    max-width: 100%;
+  }
 }
 
 /* Section Styles */
