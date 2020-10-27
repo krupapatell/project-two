@@ -284,7 +284,6 @@ main > article > header.blueheader img {
   width: auto;
 }
 
-
 @media (min-width: 768px) {
   main > article > header {
     height: unset;
@@ -293,9 +292,6 @@ main > article > header.blueheader img {
   main > article > header.grid-1-2 {
     grid-gap: 100px;
   }
-}
-
-
 }
 
 /* the main header should have a grid gap of 40px*/
