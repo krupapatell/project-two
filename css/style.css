@@ -44,7 +44,6 @@ figure {
 
   main > article > header > figure > img {
     max-width: 100%;
-    max-height: 70%;
   }
   main > article > header > section > h1 {
     padding: 0px 0px;
@@ -117,10 +116,31 @@ figure {
     height: 200px;
   }
   main > article > header {
-    height: 700px;
+    background: linear-gradient(#ebd2bb, #d2b096);
+    color: white;
+    padding: 0 20px;
+    height: 600px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
   }
+
+  .safesex {
+    background: linear-gradient(#ebd2bb, #d2b096);
+    color: white;
+    padding: 0 0px;
+    height: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
   iframe {
     max-width: 100%;
+  }
+
+  main > article > header.grid-1-2 {
+    grid-gap: 0px;
   }
 }
 
@@ -221,18 +241,18 @@ main > article > section {
   .card.grid-1-4 section {
     padding: 40px;
   }
+  main > article > header {
+    background: linear-gradient(#ebd2bb, #d2b096);
+    color: white;
+    padding: 0 20px;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
 }
 
 /* Header Styles */
-main > article > header {
-  background: linear-gradient(#ebd2bb, #d2b096);
-  color: white;
-  padding: 0 20px;
-  height: calc(100vh - 80px);
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-around;
-}
 
 .blueheader {
   background: linear-gradient(#002933, #002933);
@@ -269,12 +289,12 @@ main > article > header.blueheader img {
     height: unset;
     padding: 0px;
   }
+  main > article > header.grid-1-2 {
+    grid-gap: 100px;
+  }
 }
 
 /* the main header should have a grid gap of 40px*/
-main > article > header.grid-1-2 {
-  grid-gap: 100px;
-}
 
 main > article > header > figure {
   display: flex;
