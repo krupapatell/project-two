@@ -10,6 +10,7 @@ var menu = document.getElementById("menu");
 // get the overlay element
 var overlay = document.getElementById("overlay");
 
+var navbar = document.getElementById("navbar"); 
 
 
 
@@ -20,6 +21,7 @@ function toggleMenu() {
     overlay.classList.toggle("active");
     hamburger.classList.toggle("active");
     menu.classList.toggle("active");
+    navbar.classList.toggle("active"); 
 
    
 }

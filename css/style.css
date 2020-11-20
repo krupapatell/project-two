@@ -200,6 +200,7 @@ main > article > section {
   .grid-1-4 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
   }
 }
 
@@ -209,6 +210,7 @@ main > article > section {
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 40px;
+  width: 100%;
 }
 
 .card section {
@@ -236,7 +238,8 @@ main > article > section {
   /* image should fill figure container of card that also has 4 columns*/
   .card.grid-1-4 img {
     object-fit: cover;
-    height: 10%;
+    height: 100%;
+    width: 100%;
   }
   .card.grid-1-4 section {
     padding: 40px;
@@ -458,6 +461,29 @@ nav ul li a {
 #overlay {
   display: none;
 }
+
+img.ourwork {
+  object-fit: cover;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+.wrapper > div {
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.wrapper > div > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 /* navigation mobile style*/
 
 @media (max-width: 767px) {
@@ -511,6 +537,18 @@ nav ul li a {
 
   #overlay.active {
     display: block;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #navbar.active {
+    display: block;
+  }
+
+  nav {
+    padding: 0px 20px 0px 20px;
   }
 }
 
