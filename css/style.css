@@ -603,3 +603,30 @@ footer a {
   display: none;
   overflow: hidden;
 }
+
+.wrapper {
+  width: 100%;
+  max-width: 100%; /* Change this if you want them to max out at a certain width */
+}
+
+/*
+  We make a div that is a 16:9 aspect ratio by setting its top padding as a percentage
+  of its width. 56.25% is 9/16.
+
+  We make that div position relative, and then place the iframe inside of it.
+  We position the iframe absolutely, and set its height and width to be equal to
+  the height and width of the 16:9 we made
+*/
+
+.wrapper > div {
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.wrapper > div > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
